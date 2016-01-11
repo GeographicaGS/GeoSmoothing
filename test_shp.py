@@ -23,8 +23,8 @@ from geosmoothing.geosmoothing import GeoSmoothing
 def runShpTest():
 
     # src_file = "/home/cayetano/Documentos/capas/DERA/G03_Hidrografia/hd01_1_rio.shp"
-    src_file = "/tmp/contours_test2/contour.shp"
-    dst_file = "/tmp/contours_test2/contour_smooth.shp"
+    src_file = "data/dem_contours/test_contours.shp"
+    dst_file = "/tmp/test_contours.shp"
     gsm = GeoSmoothing()
     gsm.smoothShp(src_file, dst_file)
 

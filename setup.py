@@ -19,7 +19,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='geosmoothing',
-    version='0.1',
+    version='0.1.1',
 
     description='Smoothing GIS features with B-Splines. Input formats are WKT and SHP. Builded on top of Numpy, Scipy, Shapely and Fiona.',
     long_description=long_description,

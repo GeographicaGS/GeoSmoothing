@@ -27,17 +27,21 @@ from scipy.interpolate import splprep, splev
 from shapely.geometry import LineString, Polygon, mapping, asShape
 
 
-class Logger(object):
+class GeoSmtBase(object):
 
     def __init__(self, level=logging.INFO):
         logfmt = "[%(asctime)s - %(levelname)s] - %(message)s"
         dtfmt = "%Y-%m-%d %I:%M:%S"
         logging.basicConfig(level=level, format=logfmt, datefmt=dtfmt)
 
-    def get(self):
+    def getLogger(self):
         return logging.getLogger()
 
-class Splines(object):
+class Splines(GeoSmtBase):
+
+    def __init__(self):
+        lg = GeoSmtBase()
+        self.__logger = lg.getLogger()
 
     def compSplineKnots(self, x, y, s, k, nest=-1):
         """
@@ -75,7 +79,7 @@ class Splines(object):
 
         return(x_ip, y_ip)
 
-class GeoSmoothing(object):
+class GeoSmoothing(GeoSmtBase):
 
     def __init__(self, spl_smpar=0, spl_order=2, verbose=True):
         """
@@ -86,11 +90,11 @@ class GeoSmoothing(object):
         self.__spl_order = spl_order
 
         if not verbose:
-            lg = Logger(level=logging.ERROR)
+            lg = GeoSmtBase(level=logging.ERROR)
         else:
-            lg = Logger()
+            lg = GeoSmtBase()
 
-        self.__logger = lg.get()
+        self.__logger = lg.getLogger()
 
     def __getCoordinates(self, geom):
         """
