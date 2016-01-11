@@ -53,7 +53,7 @@ class Splines(object):
         tck_u, fp, ier, msg = splprep([x,y], s=s, k=k, nest=nest, full_output=1)
 
         if ier > 0:
-            print("{0}. ier={1}".format(msg, ier))
+            self.__logger.error("{0}. ier={1}".format(msg, ier))
 
         return(tck_u, fp)
 
