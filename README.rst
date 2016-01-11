@@ -35,7 +35,7 @@ Command Line
 
 WKT smoothing:
 
-.. code:: bash
+::
 
     $ geosmoothing_wkt [-h] wkt_string
 
@@ -47,7 +47,7 @@ WKT smoothing:
 
 Shapefile smoothing:
 
-.. code:: bash
+::
 
     $ geosmoothing_shp [-h] src_file dst_file
 
@@ -94,7 +94,11 @@ Python libraries:
 -  Numpy: http://www.numpy.org/
 -  Scipy: http://scipy.org/scipylib/
 -  Shapely: https://github.com/Toblerity/Shapely
--  Fiona: https://github.com/Toblerity/Fiona ### Others:
+-  Fiona: https://github.com/Toblerity/Fiona
+
+Others:
+~~~~~~~
+
 -  GDAL library: http://www.gdal.org/
 -  GEOS library: https://trac.osgeo.org/geos/
 

@@ -22,7 +22,7 @@ $ pip install .
 ## Usage
 ### Command Line
 WKT smoothing:
-```bash
+```
 $ geosmoothing_wkt [-h] wkt_string
 
 positional arguments:
@@ -33,7 +33,7 @@ optional arguments:
 ```
 
 Shapefile smoothing:
-```bash
+```
 $ geosmoothing_shp [-h] src_file dst_file
 
 positional arguments:
@@ -73,6 +73,7 @@ gsm.smoothShp(src_file, dst_file)
 - Scipy: http://scipy.org/scipylib/
 - Shapely: https://github.com/Toblerity/Shapely
 - Fiona: https://github.com/Toblerity/Fiona
+
 ### Others:
 - GDAL library: http://www.gdal.org/
 - GEOS library: https://trac.osgeo.org/geos/
