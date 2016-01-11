@@ -26,7 +26,7 @@ def runShpTest():
     src_file = "/tmp/contours_test2/contour.shp"
     dst_file = "/tmp/contours_test2/contour_smooth.shp"
     gsm = GeoSmoothing()
-    res_wkt = gsm.smoothShp(src_file, dst_file)
+    gsm.smoothShp(src_file, dst_file)
 
 if __name__ == "__main__":
     runShpTest()
